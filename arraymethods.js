@@ -1,4 +1,7 @@
-// join ,split, reverse,slice, splice,subString, concat,push,pop,unshift,shift
+// join ,split, reverse,slice, splice,subString,
+//  concat,push,pop,unshift,shift, flat(),Array.isArray()
+
+
 
 // const elements = ["Fire", "Air", "Water"];
 // const newString1 = elements.join();

@@ -29,21 +29,50 @@
 // }, {});
 // console.log(countObj)
 
-let people = [
-  { name: "Alice", age: 21 },
-  { name: "Max", age: 20 },
-  { name: "Jane", age: 20 },
-];
+// let people = [
+//   { name: "Alice", age: 21 },
+//   { name: "Max", age: 20 },
+//   { name: "Jane", age: 20 },
+// ];
 
-const newPeople = people.reduce((acc, cv) => {
-  let key = cv.age;
+// const newPeople = people.reduce((acc, cv) => {
+//   let key = cv.age;
 
-  if (!acc[key]) {
-    acc[key] = [];
-  }
-  acc[key].push(cv);
+//   if (!acc[key]) {
+//     acc[key] = [];
+//   }
+//   acc[key].push(cv);
 
-  return acc;
-}, {});
+//   return acc;
+// }, {});
 
-console.log(newPeople);
+// console.log(newPeople);
+
+// const arr = [1, 2, 3, 4, 5];
+
+// function sum(acc, cv) {
+//   let total = acc + cv;
+//   return total;
+// }
+
+// const mySum = arr.reduce(sum);
+// console.log(mySum);
+
+// function findMax() {
+//   let maxNum = 0;
+
+//   const arr = [1, 2, 3, , 10, 100, 90, 4, 5];
+
+//   const max = arr.reduce((acc, cv) => {
+//     if (cv > maxNum) {
+//       maxNum = cv;
+//     }
+//     return maxNum;
+//   }, 0);
+
+//   return max
+// }
+
+
+
+
