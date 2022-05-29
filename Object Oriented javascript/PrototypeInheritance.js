@@ -20,7 +20,9 @@ function Admin(...args) {
   User.apply(this, args);
 }
 
-Admin.prototype = Object.create(User.prototype)
+// Admin.prototype = Object.create(User.prototype) OR
+
+Admin.prototype = User.prototype;
 
 const user1 = new User("abc@gmail.com", "abc");
 const user2 = new User("def@gmail.com", "sri sri  lanka");

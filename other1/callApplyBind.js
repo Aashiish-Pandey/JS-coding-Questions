@@ -1,7 +1,3 @@
-// https://www.freecodecamp.org/news/javascript-this-keyword-binding-rules/
-// There are three very special methods,
-// call(), apply() and bind() that help us achieve explicit binding.
-
 // call()
 
 // function getName() {
@@ -63,6 +59,3 @@
 // let myName = getName.bind(person, hobbies[0], hobbies[1]);
 
 // myName();
-
-
-

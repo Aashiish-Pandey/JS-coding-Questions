@@ -53,6 +53,16 @@
 // let totalSum = sum(2)(3)(8)(9)();
 // console.log(totalSum);
 
-let sum = a => b => b ? sum(a + b) : a;
-let totalSum = sum(2)(3)(8)(9)();
-console.log(totalSum);
+// let sum = a => b => b ? sum(a + b) : a;
+// let totalSum = sum(2)(3)(8)(9)();
+// console.log(totalSum);
+
+let str1 = "ashish";
+function temp(str1) {
+  str1[0] = "b";
+  console.log(str1[0])
+  console.log(str1);
+}
+console.log(str1);
+temp(str1);
+console.log(str1);

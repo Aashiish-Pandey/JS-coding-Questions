@@ -28,16 +28,10 @@
 //     new Promise((resolve, reject) => setTimeout(() => resolve(3), 4000)),
 //   ]).then((response) => console.log(response)).catch((res)=>console.log(res))
 
-
 //😎😎😎😎 Promise.race() 😎😎😎😎
 
-
-
 Promise.race([
+  new Promise((resolve, reject) => setTimeout(() => resolve(3), 3000)),
 
-    new Promise((resolve,reject)=> setTimeout(()=>resolve(3),3000)),
-
-    new Promise((resolve,reject)=>setTimeout(()=>reject(2),2000))
-]).then
-
-
+  new Promise((resolve, reject) => setTimeout(() => reject(2), 2000)),
+]).then;

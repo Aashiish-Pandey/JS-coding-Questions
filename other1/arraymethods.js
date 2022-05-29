@@ -23,8 +23,8 @@
 
 // const elements = ["Fire", "Air", "Water"];
 
-// const reverseEl = elements.reverse()
-// console.log(reverseEl)
+//  elements.reverse()
+
 
 // const animals = ["ant", "bison", "camel", "duck", "elephant"];
 

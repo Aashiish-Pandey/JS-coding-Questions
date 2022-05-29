@@ -47,7 +47,7 @@
 // console.log(`${guest} ${admin}`);
 
 // let person = {
-//   //   name: "ashish",
+//   name: "ashish",
 //   mob: 99,
 //   ghar: "allahabad",
 //   offc: "noida",
