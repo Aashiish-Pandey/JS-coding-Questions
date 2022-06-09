@@ -1,5 +1,8 @@
-// join ,split, reverse,slice, splice,subString,
+// join ,split, reverse,slice, splice,
 //  concat,push,pop,unshift,shift, flat(),Array.isArray()
+//arr.includes(item, from), arr.indexOf(item, from)
+//Array.prototype.fill()
+
 
 
 
@@ -40,8 +43,9 @@
 // console.log(months);
 // console.log(removed);
 
-const myName = "Ashish"
-const temp = myName.substring()
-console.log(temp)
+let arr = [2,3,1,44,5,1,3,2]
 
+
+arr.fill(5,2)
+console.log(arr)
 

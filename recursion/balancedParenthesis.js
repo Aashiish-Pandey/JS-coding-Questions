@@ -15,32 +15,27 @@ function solve(open, close, op) {
     return;
   }
 
-  let op1 = "";
-  let op2 = "";
-
   if (close > open && open !== 0) {
     op1 = op + "(";
 
     op2 = op + ")";
 
-    open = open - 1;
-    close = close - 1;
-
-    solve(open, close, op1);
-    solve(open, close, op2);
+    solve(open - 1, close, op1);
+    solve(open, close - 1, op2);
   }
+
   if (close === open && close !== 0) {
     op1 = op + "(";
-    open = open - 1;
-    solve(open, close, op1);
+
+    solve(open - 1, close, op1);
   }
 
   if (open === 0 && close !== 0) {
-    op1 = op + "(";
-    close = close - 1;
-    solve(open, close, op1);
+    op1 = op + ")";
+
+    solve(open, close - 1, op1);
   }
 }
 
-balncParen(3);
+balncParen(2);
 console.log(myArray);
