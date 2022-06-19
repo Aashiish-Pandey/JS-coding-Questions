@@ -1,13 +1,13 @@
-//  closure Example :
+function incrementCount() {
+  let count = 0;
 
-// function x() {
-//   var a = 7;
-//   function y() {
-//     console.log(a);
-//   }
+  return function inner() {
+    count++;
+    console.log(count);
+  };
+}
 
-//   return y;
-// }
-
-// const z = x();
-// console.log(z);
+let counter1 = incrementCount()
+counter1()
+let counter2 = incrementCount()
+counter2()

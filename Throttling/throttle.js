@@ -6,10 +6,12 @@ let expensive = () => {
 
 const throttle = (func, limit) => {
   let flag = true;
+  console.log(flag);
   return function () {
     let context = this;
     args = arguments;
     if (flag) {
+      console.log(flag);
       func.apply(context, args);
       flag = false;
       setTimeout(() => {
@@ -18,6 +20,6 @@ const throttle = (func, limit) => {
     }
   };
 };
-const betterExpensive = throttle(expensive, 1000);
+const betterExpensive = throttle(expensive, 4000);
 
 window.addEventListener("resize", betterExpensive);

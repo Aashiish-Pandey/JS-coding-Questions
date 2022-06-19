@@ -1,3 +1,5 @@
+// for , for in , for of ,while
+
 // let str = ''
 
 // for(let i=0;i<10;i++) {
