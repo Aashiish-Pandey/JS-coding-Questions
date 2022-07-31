@@ -13,27 +13,21 @@ function solve(open, close, op) {
   if (open === 0 && close === 0) {
     myArray.push(op);
     return;
-  }
+  } else {
+    if (open < close && open !== 0) {
+      let op1 = op + ")";
+      let op2 = op + "(";
 
-  if (close > open && open !== 0) {
-    op1 = op + "(";
+      solve(open, close - 1, op1);
+      solve(open--, close, op2);
+    } else if (open < close && open === 0) {
+      let op2 = op + ")";
 
-    op2 = op + ")";
-
-    solve(open - 1, close, op1);
-    solve(open, close - 1, op2);
-  }
-
-  if (close === open && close !== 0) {
-    op1 = op + "(";
-
-    solve(open - 1, close, op1);
-  }
-
-  if (open === 0 && close !== 0) {
-    op1 = op + ")";
-
-    solve(open, close - 1, op1);
+      solve(open, close--, op2);
+    } else if (open === close && close !== 0) {
+      let op1 = "(";
+      solve(open--, close, op1);
+    }
   }
 }
 

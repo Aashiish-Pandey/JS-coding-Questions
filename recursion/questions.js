@@ -6,7 +6,7 @@
 // Que6: Tower of Hanoi
 
 // function print(n) {
-//   if (n == 1) {
+//   if (n == 1) { 
 //     console.log(1);
 //     return;
 //   }
