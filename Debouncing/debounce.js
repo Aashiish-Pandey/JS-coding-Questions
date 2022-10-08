@@ -1,13 +1,12 @@
+// https://www.youtube.com/watch?v=Zo-6_qx8uxg 
+// https://www.youtube.com/watch?v=kCfTEoeQvQw
+
 // How multiple calls get cancelled
-
 // let timer = 0;
-
 // function test() {
 //   clearTimeout(timer);
-
 //   timer = setTimeout(() => console.log("Hello"), 2000);
 // }
-
 // test();
 // test();
 // test();

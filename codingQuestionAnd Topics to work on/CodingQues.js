@@ -1,5 +1,3 @@
-
-
 // const array1 = [1, 4, 9, 3, 16, 4, 9, 4, 9, 4, 9];
 
 // const unqEl = [...new Set(array1)];

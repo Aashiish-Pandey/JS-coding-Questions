@@ -1,4 +1,8 @@
 // Maximum Sum Subarray of size K | Sliding Window
+
+// Given an array of integers Arr of size N and a number K. Return the maximum sum of a subarray of size K.
+// https://practice.geeksforgeeks.org/problems/max-sum-subarray-of-size-k5313/1
+
 let arr = [2, 5, 1, 8, 2, 9];
 let windowSize = 3;
 

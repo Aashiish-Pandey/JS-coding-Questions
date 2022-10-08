@@ -1,10 +1,32 @@
-// Problem Description:
+// https://www.geeksforgeeks.org/longest-sub-array-sum-k/
+// Problem : (below solution work for array of positive integers only What if array contains neagtive integer also??)
 
-// Given an array containing N positive integers and an integer K. Your task is to find the length of the longest Sub-Array with sum of the elements equal to the given value K.
+let arr = [10, 5, 2, 7, 1, 9];
+let inSum = 15;
 
-// For Input:
-// 1
-// 7 5
-// 4 1 1 1 2 3 5
-// your output is: 
-// 4 . 
+function finMaxSubArray(arr, maxSum) {
+  let i = 0;
+  let j = 0;
+  let sum = 0;
+  let maxArray = 0;
+  while (j < arr.length) {
+    sum = sum + arr[j];
+    if (sum < maxSum) {
+      j++;
+    } else if (sum === maxSum) {
+      maxArray = maxArray < j - i + 1 ? j - i + 1 : maxArray;
+      sum = sum - arr[i];
+      i++;
+      j++;
+    } else if (maxSum < sum) {
+      while (maxSum < sum) {
+        sum = sum - arr[i];
+        i++;
+      }
+      j++;
+    }
+  }
+  return maxArray;
+}
+
+console.log(finMaxSubArray(arr, inSum));

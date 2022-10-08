@@ -1,3 +1,4 @@
+// pollyfills for filter
 let arr = [1, 3, 4, 2, 6, 8, 7];
 
 function findEven(num) {

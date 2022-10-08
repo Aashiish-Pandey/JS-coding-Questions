@@ -1,3 +1,5 @@
+// https://www.freecodecamp.org/news/copying-stuff-in-javascript-how-to-differentiate-between-deep-and-shallow-copies-b6d8c1ef09cd/
+// https://www.geeksforgeeks.org/what-is-shallow-copy-and-deep-copy-in-javascript/
 // const a = {
 //     en: 'Bye',
 //     de: 'Tschüss'

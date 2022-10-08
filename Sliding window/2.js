@@ -1,3 +1,6 @@
+
+// https://practice.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1
+
 let arr = [12, -1, -7, 8, -15, 30, 16, 28];
 let windowSize = 3;
 
@@ -16,7 +19,7 @@ function findFirstNeagtive(arr, k) {
     } else if (j - i + 1 === k) {
       negNum.length ? output.push(negNum[0]) : output.push(0);
 
-      if (negNum.includes(arr[i])) {
+      if (arr[i] === negNum[0]) {
         negNum.shift();
       }
 

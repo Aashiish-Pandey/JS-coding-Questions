@@ -1,10 +1,12 @@
 // join ,split, reverse,slice, splice,
-//  concat,push,pop,unshift,shift, flat(),Array.isArray()
-//arr.includes(item, from), arr.indexOf(item, from)
+// concat,push,pop,unshift,shift, flat(),Array.isArray()
+// arr.includes(item, from), arr.indexOf(item, from)
 //Array.prototype.fill()
 
 
 
+
+// 😎😎😎😎😎 Join method 😎😎😎😎😎
 
 // const elements = ["Fire", "Air", "Water"];
 // const newString1 = elements.join();
@@ -16,6 +18,8 @@
 // console.log(newString3);
 // console.log(newString4);
 
+
+// 😎😎😎😎😎 split method 😎😎😎😎😎
 // const str = "The quick brown fox jumps over the lazy dog.";
 
 // const newArray1 = str.split(" ");
@@ -26,9 +30,10 @@
 
 // const elements = ["Fire", "Air", "Water"];
 
+// 😎😎😎😎😎 reverse method 😎😎😎😎😎
 //  elements.reverse()
 
-
+// 😎😎😎😎😎 slice method 😎😎😎😎😎
 // const animals = ["ant", "bison", "camel", "duck", "elephant"];
 
 // const new1 = animals.slice(1, 4);
@@ -39,6 +44,8 @@
 
 // const months = ["Jan", "March", "April", "June"];
 
+
+// 😎😎😎😎😎 splice method 😎😎😎😎😎
 // const removed = months.splice(2);
 // console.log(months);
 // console.log(removed);

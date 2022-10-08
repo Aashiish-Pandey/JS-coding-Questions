@@ -1,4 +1,5 @@
 //  Count Occurrences Of Anagrams | Sliding Window
+// https://practice.geeksforgeeks.org/problems/count-occurences-of-anagrams5839/1
 
 let str = "aabaabaa";
 let pat = "aaba";

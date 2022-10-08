@@ -45,17 +45,17 @@
 
 // bind()
 
-// function getName(hobby1, hobby2) {
-//   console.log(this.name);
-//   console.log(hobby1, hobby2);
-// }
+function getName(hobby1, hobby2,test1,test2) {
+  console.log(this.name);
+  console.log(hobby1, hobby2,test1,test2);
+}
 
-// let person = {
-//   name: "ashish",
-//   mob: 8800,
-// };
-// const hobbies = ["cricket", "movie"];
+let person = {
+  name: "ashish",
+  mob: 8800,
+};
+const hobbies = ["cricket", "movie"];
 
-// let myName = getName.bind(person, hobbies[0], hobbies[1]);
+let myName = getName.bind(person, hobbies[0], hobbies[1]);
 
-// myName();
+myName("aam","naam");

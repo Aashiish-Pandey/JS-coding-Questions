@@ -1,8 +1,11 @@
 // 🙄😶😑Need to learn closure more , why let flag = true; is not getting updated in this case
 
-let expensive = () => {
+// https://www.youtube.com/watch?v=81NGEXAaa3Y
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
+
+function expensive() {
   console.log("Expensive");
-};
+}
 
 const throttle = (func, limit) => {
   let flag = true;
