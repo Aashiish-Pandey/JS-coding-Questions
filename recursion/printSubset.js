@@ -4,6 +4,8 @@
 // Que2 : Print Unique Subset
 // Que3: Print all the subset of a given array
 
+// https://www.geeksforgeeks.org/recursive-program-to-generate-power-set/
+
 // function findSubset(inString, op) {
 //   let ip = inString;
 

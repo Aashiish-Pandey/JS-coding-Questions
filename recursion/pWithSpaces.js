@@ -10,11 +10,11 @@
 // function perumation(ip) {
 //   let op = ip[0];
 //   let newIp = ip.substring(1);
-//   solve(newIp, op);
+//   solve(op,ip);
 //   return;
 // }
 
-// function solve(ip, op) {
+// function solve(op,ip) {
 //   if (ip === "") {
 //     console.log(op);
 //     return;
