@@ -47,4 +47,4 @@ function solve(op, open, close) {
 //   }
 // }
 
-console.log(balncParen(2));
+console.log(balncParen(3));

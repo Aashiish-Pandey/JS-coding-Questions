@@ -52,7 +52,6 @@
 
 let arr = [2,3,1,44,5,1,3,2]
 
-
-arr.fill(5,2)
+arr.fill(9,2,4)
 console.log(arr)
 

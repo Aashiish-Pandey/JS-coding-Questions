@@ -1,9 +1,7 @@
  // ******* Topics to work on *******
 
-
 //  1: work on string and working with string and string manipulation
 //  https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/ 
-
 
 // 2: working of script tag in html file {Example :debouncing code Example)
 
@@ -18,3 +16,5 @@
 
 // Math.floor()
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Division#:~:text=Syntax-,Division%20(%2F),right%20operand%20is%20the%20divisor.
+
+// Constructor function 

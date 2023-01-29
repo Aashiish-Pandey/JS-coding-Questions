@@ -3,6 +3,7 @@
 // str.includes(substr, pos) 
 //There are 3 methods in JavaScript to get a substring: substring, substr and slice.
 // A lowercase letter is always greater than the uppercase: alert( 'a' > 'Z' ); // true
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 // Que1 : find all occurence of a substring in a string
 
