@@ -7,8 +7,29 @@
 // https://www.geeksforgeeks.org/next-greater-element/
 
 // Approch 1 Brute force approch
+// let arr = [1, 3, 2, 4];
 
-// Aproch 2 : optimized approch using stack
+// function findNextGreater(arr) {
+//   let answer = [];
+//   let i = 0;
+//   while (i < arr.length) {
+//     let max = arr[i];
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (max < arr[j]) {
+//         max = arr[j];
+//       }
+//     }
+//     max === arr[i] ? answer.push(-1) : answer.push(max);
+//     i++;
+//   }
+//   return answer;
+// }
+
+// console.log(findNextGreater(arr));
+
+
+
+//*************** */ Aproch 2 : optimized approch using stack*******************************************
 
 let arr = [1, 3, 2, 4];
 

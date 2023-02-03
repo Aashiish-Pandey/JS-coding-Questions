@@ -3,6 +3,34 @@
 //  (not considering distance, but value) smaller on left of every element.
 // If an element has no smaller on the left side, print -1 .
 
+
+// let stock = [100, 80, 60, 70, 60, 75, 85];
+
+// function findNGR(arr) {
+//   let arrStack = [];
+//   let ngrValues = [];
+//   let i = 0;
+//   while (i < arr.length) {
+//     if (!arrStack.length) {
+//       ngrValues.push(-1);
+//       arrStack.unshift(arr[i]);
+//       i++;
+//     } else if (arr[i] < arrStack[0]) {
+//       ngrValues.push(arrStack[0]);
+//       arrStack.unshift(arr[i]);
+//       i++;
+//     } else if (arrStack[0] < arr[i]) {
+//       while (arrStack[0] < arr[i] && arrStack.length) {
+//         arrStack.shift();
+//       }
+//     }
+//   }
+//   return ngrValues;
+// }
+
+// console.log(findNGR(stock));
+
+
 let arr = [4, 5, 2, 10, 8];
 
 const findNextSmaller = (arr) => {
