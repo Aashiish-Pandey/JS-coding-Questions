@@ -55,3 +55,11 @@ let arr = [2,3,1,44,5,1,3,2]
 arr.fill(9,2,4)
 console.log(arr)
 
+
+// create an Array when only length of array is given :
+
+// use Case pagnitaion in react 
+
+let a1 = [...Array(10)].map((_,i)=>i+1)
+console.log(a1)
+
