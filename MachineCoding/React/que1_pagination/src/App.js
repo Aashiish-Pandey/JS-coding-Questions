@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Loader from "./Components/Loader";
 import Products from "./Components/Products";
+import "./App.css";
 
 function App() {
   let URL = "https://dummyjson.com/products?limit=100";
@@ -8,7 +9,7 @@ function App() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
-  const totalPage = Math.ceil(items.length/10)
+  const totalPage = Math.ceil(items.length / 10);
 
   async function getData() {
     setLoading(true);
@@ -19,10 +20,9 @@ function App() {
     console.log(data.products);
   }
   function pageHandler(page) {
-    if(page!==0 && page <=totalPage) {
-      setPage(page)
+    if (page !== 0 && page <= totalPage) {
+      setPage(page);
     }
-
   }
 
   useEffect(() => {
@@ -33,14 +33,20 @@ function App() {
   } else {
     return (
       <div>
-
+        <div className="products">
         <Products items={items.slice(page * 10 - 10, page * 10)} />
-        <button onClick={()=>pageHandler(page-1)}>◀️</button>
+        </div>
+        <div className="pagination">
+        <span className={page===1? "Pagination__Disabled":""} onClick={() => pageHandler(page - 1)}>◀️</span>
         {[...Array(totalPage)].map((_, pageNo) => (
-          <button style={{margin:20}} onClick={()=>setPage(pageNo+1)}>{pageNo + 1}</button>
+          <span onClick={() => setPage(pageNo + 1)}>
+            {pageNo + 1}
+          </span>
         ))}
-         <button onClick={()=>pageHandler(page+1)}>▶️</button>
+        <span className={totalPage===page? "Pagination__Disabled":""} onClick={() => pageHandler(page + 1)}>▶️</span>
+        </div>
       </div>
+      
     );
   }
 }

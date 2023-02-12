@@ -3,12 +3,10 @@ function Product({ items }) {
     <>
       {items.map((product) => {
         return (
-          <div key={product.id}>
-            <h1>{product.id}</h1>
-            <h1>{product.title}</h1>
+          <span key={product.id} className="product__single">
             <img src={product.thumbnail} alt={product.description} />
-            
-          </div>
+            <span>{product.title}</span>
+          </span>
         );
       })}
     </>
