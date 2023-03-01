@@ -1,0 +1,67 @@
+https://github.com/alok722/namaste-javascript-notes/blob/master/notes/lecture-21.md
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+https://javascript.info/promise-api
+https://github.com/alok722/namaste-javascript-notes
+
+
+**Episode1 Callback hell............**
+
+<!-- https://www.youtube.com/watch?v=yEKtJGha3yM&list=PLlasXeu85E9eWOpw9jxHOQyGMRiBZ60aX&index=2 -->
+
+The two Problems with callbacks
+1) Callback Hell: Callbacks are useful when we want to perfrom some extra functionality with our already existing function for example passing an error handling callback to our already created function, BUT when callbacks within themselves start taking in other functions as callbacks then that mess that you are left with is known as the Callback Hell leading to unreadable code, hence unmaintanable code.
+2) Inversion Of Control: when we pass a function to other function as a callback we are giving the called function the control of whether to even call it or not or maybe call it in a wrong context. For example a success callback is called when an error occours inside a called function (maybe due to human error while writing the code  for called function), this type of giving up of control over our functions is known as inversion of control.
+
+
+**Episode2 Promises.....................** 
+
+
+😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎
+
+que1: what is Promise : 
+-> Promise object is a placeholder for certain period of time until we receive value from asynchronous operation.
+
+-> A container for a future value.
+
+->😁A Promise is an object that Represnet the eventual completion or failure of an asynchronous operation.
+const cart = ["shoes", "pants", "kurta"];
+
+const promiseRef = createOrder(cart);
+// this promiseRef has access to `then`
+
+// {data: undefined}
+// Initially it will be undefined so below code won't trigger
+// After some time, when execution has finished and promiseRef has the data then automatically the below line will get triggered.
+
+promiseRef.then(function () {
+  proceedToPayment(orderId);
+});
+
+
+A Promise is in one of these states:
+
+pending: initial state, neither fulfilled nor rejected.
+fulfilled: meaning that the operation was completed successfully.
+rejected: meaning that the operation failed.
+The eventual state of a pending promise can either be fulfilled with a value or rejected with a reason (error). When either of these options occur, the associated handlers queued up by a promise's then method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.
+
+A promise is said to be settled if it is either fulfilled or rejected, but not pending.
+
+😎😎😎😎😎😎
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
+
+
+Promise.all()
+Promise.allSettled()
+Promise.any()
+Promise.race()
+Promise.prototype.then()
+Promise.prototype.catch()
+Promise.prototype.finally()
+Promise.resolve()
+Promise.reject()
+
+
+
+

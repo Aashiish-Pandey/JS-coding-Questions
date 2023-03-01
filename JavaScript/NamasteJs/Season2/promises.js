@@ -13,5 +13,6 @@
 const API = 'https://jsonplaceholder.typicode.com/todos/1'
 
 const apiData = fetch(API)
+console.log(apiData)
 
-apiData.then(response=>console.log(response))
+apiData.then(response=>console.log(apiData))
