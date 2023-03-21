@@ -21,7 +21,7 @@
 //     new Promise((resolve, reject) => setTimeout(() => resolve(3), 4000)),
 //   ]).then((response) => console.log(response)).catch((res)=>console.log(res))
 
-// Suppose if I want to get only resolved promises or only rejectedPromise :
+// 😎😎😎😎 Suppose if I want to get only resolved promises or only rejectedPromise :
 
 // Promise.allSettled([
 //   new Promise((resolve, reject) => setTimeout(() => resolve(1), 3000)),

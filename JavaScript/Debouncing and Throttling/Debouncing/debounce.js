@@ -1,3 +1,5 @@
+
+// 😍😎😋😋😍😎😋😋😍😎😋😋😍😎😋😋😍😎😋😋😍😎😋😋
 // https://www.youtube.com/watch?v=Zo-6_qx8uxg 
 // https://www.youtube.com/watch?v=kCfTEoeQvQw
 
@@ -23,7 +25,7 @@ function debounce(func, delay) {
   return function () {
     let context = this;
     let args = arguments;
-    clearInterval(timer);
+    clearTimeout(timer);
     timer = setTimeout(() => func.apply(context, args), delay);
   };
 }

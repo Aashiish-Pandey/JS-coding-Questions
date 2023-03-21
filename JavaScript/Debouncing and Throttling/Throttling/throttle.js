@@ -1,4 +1,4 @@
-// 🙄😶😑Need to learn closure more , why let flag = true; is not getting updated in this case
+// 🙄😶😑 Need to learn closure more , why let flag = true; is not getting updated in this case
 
 // https://www.youtube.com/watch?v=81NGEXAaa3Y
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments

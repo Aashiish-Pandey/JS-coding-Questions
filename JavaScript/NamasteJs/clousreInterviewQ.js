@@ -1,5 +1,35 @@
 // Q: 😀😁😀Print 1 after 1 sec, 2 after 2 sec till 5 : Tricky interview question
 
+// using let :
+
+// function print(num) {
+//   for(let i=0;i<=num;i++) {
+//     setTimeout(()=>{
+//       console.log(i)
+//     },i*1000)
+//   }
+// }
+
+// print(5)
+
+
+// using var 
+
+// function printNum(n) {
+//   for (var i = 1; i <= n; i++) {
+//     tempPrint(i);
+//   }
+//   function tempPrint(i) {
+//     setTimeout(() => {
+//       console.log(i);
+//     }, i * 1000);
+//   }
+
+  
+// }
+
+// printNum(5);
+
 // for (var i = 1; i <= 5; i++) {
 //   setTimeout(function print() {
 //     console.log(i);
