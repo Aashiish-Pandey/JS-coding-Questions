@@ -1,0 +1,21 @@
+nav {
+    font-size: xx-large;
+}
+nav ul {
+
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    cursor: pointer;
+    padding: 5px;
+}
+
+nav ul li:hover {
+
+    background-color: grey;
+    color: white;
+
+}
