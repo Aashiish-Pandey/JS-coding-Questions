@@ -6,16 +6,29 @@ nav ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 nav ul li {
     cursor: pointer;
     padding: 5px;
+    flex:auto;
+    text-align: center;
 }
 
 nav ul li:hover {
 
     background-color: grey;
     color: white;
+
+}
+
+@media(max-width:400px) {
+
+    nav ul {
+
+       flex-direction: column;
+        justify-content: space-around;
+    }
 
 }
