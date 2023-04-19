@@ -1,10 +1,18 @@
-let pr = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Success");
-  }, 4000);
-});
+const animals = [
+  { species: 'Lion', name: 'King' },
+  { species: 'Whale', name: 'Queen' }
+];
 
-console.log(pr);
+function printAnimals(i) {
+    this.print = function() {
+      console.log('#' + i + ' ' + this.species
+                  + ': ' + this.name);
+    }
+    this.print();
+  }
 
-pr.then((data) => console.log(data));
-console.log(pr);
+
+ for(let i=0;i<animals.length;i++) {
+
+    printAnimals.call(animals[i],i)
+  }

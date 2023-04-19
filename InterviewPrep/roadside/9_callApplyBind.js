@@ -1,4 +1,5 @@
 // https://roadsidecoder.hashnode.dev/javascript-interview-questions-call-bind-and-apply-polyfills-output-based-explicit-binding
+
 // https://www.youtube.com/watch?v=VkmUOktYDAU&list=PLKhlp2qtUcSaCVJEt4ogEFs6I41pNnMU5&index=9
 
 // exmp1:
