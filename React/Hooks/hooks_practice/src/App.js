@@ -1,5 +1,5 @@
 import "./App.css";
-import UseEffect from "./ImpHooks/UseEffect";
+import UseEffect from "./ImpHooks/useEffect/UseEffect";
 
 function App() {
   return (
