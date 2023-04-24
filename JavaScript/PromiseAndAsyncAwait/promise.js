@@ -1,18 +1,19 @@
-// let p = new Promise(function (resolve, reject) {
-//   let a = 2;
+let p = new Promise(function (resolve, reject) {
+  let a = 2;
 
-//   if (a == 2) {
-//     resolve("Success");
-//   } else {
-//     reject("not Success");
-//   }
-// });
+  if (a == 2) {
+    resolve("Success");
+  } else {
+    reject("not Success");
+  }
+});
+console.log(p)
 
-// p.then((mssg) => {
-//   console.log("hello", mssg);
-// }).catch((mssg) => {
-//   console.log("Hello", mssg);
-// });
+p.then((mssg) => {
+  console.log("hello", mssg);
+}).catch((mssg) => {
+  console.log("Hello", mssg);
+});
 
 //😎😎😎😎 Promise.all() 😎😎😎😎
 
@@ -30,8 +31,8 @@
 
 //😎😎😎😎 Promise.race() 😎😎😎😎
 
-Promise.race([
-  new Promise((resolve, reject) => setTimeout(() => resolve(3), 3000)),
+// Promise.race([
+//   new Promise((resolve, reject) => setTimeout(() => resolve(3), 3000)),
 
-  new Promise((resolve, reject) => setTimeout(() => reject(2), 2000)),
-]).then;
+//   new Promise((resolve, reject) => setTimeout(() => reject(2), 2000)),
+// ]).then;
