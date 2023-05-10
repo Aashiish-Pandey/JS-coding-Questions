@@ -5,8 +5,8 @@
 document.querySelector("#grandparent").addEventListener(
   "click",
   (e) => {
-    console.log("grand Parent Clicked");
-    e.stopPropagation();
+    alert("grand Parent Clicked");
+    // e.stopPropagation();
   },
   true // capturing
 );
@@ -14,8 +14,8 @@ document.querySelector("#grandparent").addEventListener(
 document.querySelector("#parent").addEventListener(
   "click",
   (e) => {
-    console.log("Parent clicked");
-    e.stopPropagation();
+    alert("Parent clicked");
+    // e.stopPropagation();
   },
   false // Bubbling
 );
@@ -23,8 +23,8 @@ document.querySelector("#parent").addEventListener(
 document.querySelector("#child").addEventListener(
   "click",
   (e) => {
-    console.log("child clicked");
-    e.stopPropagation();
+    alert("child clicked");
+    // e.stopPropagation();
   },
   true // capturing
 );

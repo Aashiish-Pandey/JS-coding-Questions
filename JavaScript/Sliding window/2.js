@@ -1,5 +1,34 @@
+// First negative integer in every window of size k
 
 // https://practice.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1
+
+
+// Bruit Force approch
+
+// function findFirstNeg(arr, k) {
+//   let i = 0;
+//   let j = 0;
+//   let ans = [];
+//   let negNum;
+//   while (i < arr.length - 2) {
+//     negNum = 0;
+//     for (j = i; j - i + 1 <= k; j++) {
+//       if (arr[j] < 0) {
+//         negNum = arr[j];
+
+//         break;
+//       }
+//     }
+//     ans.push(negNum);
+//     i++;
+//   }
+//   return ans;
+// }
+
+// console.log(findFirstNeg(arr, windowSize));
+
+// Sliding Window approch
+
 
 let arr = [12, -1, -7, 8, -15, 30, 16, 28];
 let windowSize = 3;

@@ -1,56 +1,54 @@
 //  Count Occurrences Of Anagrams | Sliding Window
 // https://practice.geeksforgeeks.org/problems/count-occurences-of-anagrams5839/1
 
-
 /// very nice Question
 
 let str = "aabaabaa";
 let pat = "aaba";
 
-function countPatterEl(pat) {
-  let diffChar = 0;
+function getPatObj(pat) {
   let obj = pat.split("").reduce((acc, cv) => {
     if (cv in acc) {
       acc[cv]++;
     } else {
       acc[cv] = 1;
-      diffChar++;
     }
     return acc;
   }, {});
-  return { countPatterChar: obj, diffChar: diffChar };
+  return obj;
 }
 
 function countAnagram(str, pat) {
   let i = 0;
   let j = 0;
-  let totalAnagram = 0;
-
-  let { countPatterChar, diffChar } = countPatterEl(pat);
+  let patObj = getPatObj(pat);
+  let unqChar = Object.keys(patObj).length;
+  let k = pat.length;
+  let count = 0;
 
   while (j < str.length) {
-    if (str[j] in countPatterChar) {
-      countPatterChar[j]--;
-      if (countPatterChar[j] === 0) {
-        diffChar--;
+    if (str[j] in patObj) {
+      patObj[str[j]]--;
+      if (patObj[str[j]] === 0) {
+        unqChar--;
       }
     }
-
-    if (j - i + 1 < pat.length) {
+    if (j - i + 1 < k) {
       j++;
-    } else if (j - i + 1 === pat.length) {
-      if (diffChar === 0) {
-        totalAnagram++;
-
-        console.log(totalAnagram);
+    } else if (j - i + 1 === k) {
+      if (unqChar === 0) {
+        count++;
       }
-      countPatterChar[i]++;
+      patObj[str[i]]++;
+      if (patObj[str[i]] === 1) {
+        unqChar++;
+      }
       i++;
+
       j++;
     }
   }
-
-  return totalAnagram;
+  return count;
 }
 
 console.log(countAnagram(str, pat));

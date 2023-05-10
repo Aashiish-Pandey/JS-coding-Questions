@@ -1,4 +1,4 @@
-// // https://www.geeksforgeeks.org/javascript-math-object/?ref=lbp
+// https://www.geeksforgeeks.org/javascript-math-object/?ref=lbp
 
 
 // Math.floor()
@@ -8,3 +8,7 @@
 // Math.ceil()
 
 // https://www.geeksforgeeks.org/javascript-math-ceil-function/?ref=lbp
+
+// Math.max(...arr)
+
+//Math.min(...arr)
