@@ -1,0 +1,32 @@
+1😎: 
+submit event :
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
+
+The submit event fires when the user clicks a submit button or presses Enter while 
+editing a field (e.g. <input type="text">) in a form.
+ The event is not sent to the form when calling the form.submit() method directly.
+
+
+
+ 2😎:
+ https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+
+classList property
+
+
+3😎: mouse right click event :
+https://javascript.plainenglish.io/how-to-handle-right-clicks-with-javascript-86d35714ce33
+
+We can set the window.contextmenu property to an event handler function to listen for right clicks on the page.
+
+To do this, we write:
+
+window.oncontextmenu = (e) => {
+  e.preventDefault()
+  console.log('right clicked')
+}
+We have the e parameter that has the right-click event object.
+
+We call e.preventDefault to stop the default behavior for right clicks, which is to show the context menu on the page.
+
+Once we called that, we can do anything we want in the rest of the function when the user right-clicks on the page.
