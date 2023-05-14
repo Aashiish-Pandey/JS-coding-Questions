@@ -1,4 +1,4 @@
-function print(name) {
+function print(...name) {
   console.log(name);
 }
 
@@ -15,6 +15,6 @@ function debounce(func, delay) {
 const optimizedFunc = debounce(print, 300);
 
 const inputField = document.querySelector(".inputbox");
-inputField.addEventListener("keyup", ()=>{
-    optimizedFunc("ashish")
+inputField.addEventListener("keyup", (event)=>{
+    optimizedFunc(event.target.value,"Pandey")
 });
