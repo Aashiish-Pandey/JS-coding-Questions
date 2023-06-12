@@ -3,42 +3,52 @@
 
 let string1 = "ADOBECODEBANC";
 let string2 = "ABC";
-function findCount(string2) {
-  let countObj = {};
-  let k = 0;
-  while (k < string2.length) {
-    countObj[string2[k]] = countObj[string2[k]] + 1 || 1;
-    k++;
-  }
-  return countObj;
-}
 
-function findMinWindow(string1, string2) {
+const getMapObj = (tarStr) => {
+  const mapObj = tarStr.split("").reduce((acc, cv) => {
+    if (cv in acc) {
+      acc[cv]++;
+    } else {
+      acc[cv] = 1;
+    }
+    return acc;
+  }, {});
+  return mapObj;
+};
+
+function findMinWindow(str, tarStr) {
   let i = 0;
   let j = 0;
-  let min = 0;
-  let countObj = findCount(string2);
-  let count = Object.keys(countObj).length;
-  console.log(countObj);
-  console.log(count);
+  let mapObj = getMapObj(tarStr);
+  let unqChar = Object.keys(mapObj).length;
+  let minString=Infinity
 
-  while (j < string1.length) {
-    // if (count === 0) {
-    //   min = j - i + i < min ? j - i + 1 : min;
-    // }
-
-    if (string1[j] in countObj) {
-      countObj[string1[j]]--;
-      if (countObj[string1[j]] === 0) {
-        count--;
-      }
-
-      if (count === 0) {
-        min = j - i + i < min ? j - i + 1 : min;
+  while (j < str.length) {
+    if (str[j] in mapObj) {
+      mapObj[str[j]]--;
+      if (mapObj[str[j]] === 0) {
+        unqChar--;
       }
     }
+    if (unqChar === 0) {
+      while (unqChar === 0) {
+        minString =
+          minString.length < j - i + 1 ? minString : str.slice(i, j + 1);
+        // slide
+        if (str[i] in mapObj) {
+          mapObj[str[i]]++;
+          if (mapObj[str[i]] == 1) {
+            unqChar++;
+          }
+        }
+        i++;
+      }
+    }
+    if (0 < unqChar) {
+      j++;
+    }
   }
+  return minString===Infinity ? "": minString;
 }
 
 console.log(findMinWindow(string1, string2));
-con;
