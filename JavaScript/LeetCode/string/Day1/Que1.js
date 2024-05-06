@@ -31,12 +31,12 @@
 
 // // approch2
 
-const isVowel = (char) => {
+function isVowel(char) {
   let vowels = "aeiou";
   return (
     vowels.includes(char.toUpperCase()) || vowels.includes(char.toLowerCase())
   );
-};
+}
 
 let reverseVowels = function (s) {
   let inArr = s.split("");
