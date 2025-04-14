@@ -1,0 +1,41 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.listContainer {
+  width: 80%;
+}
+
+.listItem{
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+  /* gap:10px; */
+  width: 100%;
+  border-bottom: 1px solid black;
+
+}
+input {
+  width: 100%;
+}
+.delete {
+  background: none;
+  border: none;
+  opacity: 0;
+}
+
+.delete:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.circle {
+  display: flex;
+  height: 25px;
+  width:25px;
+  border: 1px solid green;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}

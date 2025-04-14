@@ -1,16 +1,20 @@
-function Counter() {
-    let count =0
-    this.up = function () {
-        return ++count
-    }
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("P1 resolved");
+  }, 5000);
+});
 
-    this.down = function() {
-        return --count
-    }
-}
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject("P2 Rejected");
+  }, 5000);});
 
-let count= new Counter()
+const p3 = new Promise ((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('p3 Resolved')
+    },5000)
+})
 
-console.log(count.up())
-console.log(count.up())
-console.log(count.down())
+const result = Promise.race([p1,p2,p3])
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));

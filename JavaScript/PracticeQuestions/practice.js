@@ -1,20 +1,9 @@
-// two sum problem
-let nums = [2, 7, 11, 15];
-let target = 9;
+const myMap = new Map();
 
-function findTwoSum(arr, target) {
-  let sum = target;
+myMap.set(1, "one").set(2, "Two").set(3, "Three").set(4, "Four");
 
-  let myMap = new Map();
-  let i = 0;
-  while (i < arr.length) {
-    if (!myMap.has(sum - arr[i])) {
-      myMap.set(arr[i], i);
-      i++;
-    } else if (myMap.has(sum - arr[i])) {
-      return [myMap.get(key), i];
-    }
-  }
-}
+const arr1 = [];
+const arr2 = [];
+myMap.clear();
 
-console.log(findTwoSum(nums, target));
+console.log(myMap);

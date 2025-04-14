@@ -22,3 +22,36 @@ const double = arr.mapPolyfill((num, index, array) => {
 });
 
 console.log(double);
+
+
+
+// Improved map polyfill
+
+const num = [2, 3, 4, 5, 6];
+
+if (!Array.prototype.mapPolyfill) {
+  Array.prototype.mapPolyfill = function (callback, thisArg) {
+    if (this == null) {
+      throw new TypeError("Cannot read property 'mapPolyfill' of null or undefined");
+    }
+
+    if (typeof callback !== 'function') {
+      throw new TypeError(callback + ' is not a function');
+    }
+
+    const result = [];
+    for (let i = 0; i < this.length; i++) {
+      if (Object.prototype.hasOwnProperty.call(this, i)) {
+        result.push(callback.call(thisArg, this[i], i, this));
+      }
+    }
+    return result;
+  };
+}
+
+const doubled= num.mapPolyfill((num, i, arr) => {
+  console.log(arr, i);
+  return num * 2;
+});
+
+console.log(doubled);
