@@ -6,6 +6,7 @@ const bSearch = (arr,target)=>{
     let end = arr.length-1
     let mid=-1
     console.log('arr',arr)
+
     while(start<=end) {
 
         mid = Math.floor((start+end)/2)

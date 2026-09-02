@@ -1,26 +1,22 @@
-class User {
-  constructor(email, name) {
-    this.email = email;
+class Employee {
+  constructor(name) {
     this.name = name;
   }
 
-  login() {
-    console.log(this.name, "is logged in");
-  }
-
-  logout() {
-    console.log(this.name, "is logged out");
+  getSalary() {
+    return 300000;
   }
 }
 
-class Admin  extends User{
-
-
+class Manager extends Employee {
+  constructor(name, bonus) {
+    super(name);
+    this.bonus = bonus;
+  }
+  getSalary() {
+    return super.getSalary() + this.bonus;
+  }
 }
 
-let admin1 = new Admin()
-admin1.login("000@gmail.com","admin class")
-
-
-
-
+const manager = new Manager("Ashish", "10");
+console.log(manager.getSalary());

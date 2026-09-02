@@ -1,20 +1,7 @@
-const p1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("P1 resolved");
-  }, 5000);
-});
-
-const p2 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    reject("P2 Rejected");
-  }, 5000);});
-
-const p3 = new Promise ((resolve,reject)=>{
-    setTimeout(()=>{
-        resolve('p3 Resolved')
-    },5000)
-})
-
-const result = Promise.race([p1,p2,p3])
-  .then((res) => console.log(res))
-  .catch((err) => console.log(err));
+//  1: count unique element in an array
+//  2: remove duplicate
+//  3: reversing a String
+//  4: reversing indivisual element of an array of string
+//  5: Flattning a nested array
+//  6:  write code for this function: sum(a)(b)(c)....( n)().
+//  This should return the sum of a+b+c....+n.

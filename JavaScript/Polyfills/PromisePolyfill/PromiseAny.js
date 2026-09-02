@@ -13,7 +13,7 @@ const dummyTask = (time, status) => {
 };
 
 const allTasks = [
-  dummyTask(100, 0),
+  dummyTask(100, 0),   
   dummyTask(3000, 0),
   dummyTask(4000, 0),
   dummyTask(2000, 0),

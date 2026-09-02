@@ -1,0 +1,1 @@
+1: Service worker and cahcing the way it work  in paytm

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Auto-logout (inactivity timer)</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 40rem;
+        margin: 2rem auto;
+        line-height: 1.5;
+      }
+      #status {
+        padding: 0.75rem;
+        background: #eef;
+        border-radius: 6px;
+      }
+      .logged-out {
+        background: #fdd !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Auto-logout after inactivity</h1>
+    <p>
+      Move the mouse or press a key. Idle for 5 seconds (demo) and you are
+      “logged out”. Each activity resets the timer via <code>clearTimeout</code>.
+    </p>
+    <p id="status">Active — logout in 5s if idle.</p>
+
+    <script>
+      // Pattern: debounce. Activity clears the previous timer and starts a new one.
+      let logoutTimer;
+      const IDLE_MS = 5000;
+      const statusEl = document.getElementById("status");
+      let loggedOut = false;
+
+      function logout() {
+        loggedOut = true;
+        statusEl.textContent = "User logged out due to inactivity!";
+        statusEl.classList.add("logged-out");
+        console.log("User logged out due to inactivity!");
+      }
+
+      function resetLogoutTimer() {
+        if (loggedOut) return;
+        clearTimeout(logoutTimer);
+        statusEl.textContent = "Active — logout in 5s if idle.";
+        logoutTimer = setTimeout(logout, IDLE_MS);
+      }
+
+      document.addEventListener("mousemove", resetLogoutTimer);
+      document.addEventListener("keydown", resetLogoutTimer);
+      resetLogoutTimer();
+    </script>
+  </body>
+</html>

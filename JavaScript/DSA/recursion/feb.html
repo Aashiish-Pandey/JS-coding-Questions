@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function fib(n, indent = 0) {
+  const prefix = " ".repeat(indent * 2); // indent visually
+
+  console.log(`${prefix}fib(${n}) called`);
+
+  if (n <= 1) {
+    console.log(`${prefix}→ return ${n}`);
+    return n;
+  }
+
+  const left = fib(n - 1, indent + 1);
+  const right = fib(n - 2, indent + 1);
+
+  const result = left + right;
+  console.log(`${prefix}→ return ${result} (fib(${n - 1}) + fib(${n - 2}))`);
+  return result;
+}
+
+const result = fib(4);
+console.log("Fibonacci Result:", result);
+</script>
+</body>
+</html>

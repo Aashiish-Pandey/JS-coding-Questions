@@ -140,7 +140,7 @@
 // 😎😎😎😎😎😎😎😎😎😎😎😎😎😎 Promise Chaining 3 😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎
 
 // Note🧐🧐🧐 catch will handle any error that is coming before it in the promise chain.
-// then will get execute if even if it is present after catch.
+// then will get executed  even if it is present after catch.
 
 const cart = ["Shoes", "Shirt", "Pant"];
 

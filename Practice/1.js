@@ -1,54 +1,29 @@
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 5, 1];
 
-// 1 by using slice method
-// const splitArray = (arr, chunkSize) => {
-//   const chunkedArr = [];
-//    let start = 0
-//    let end = chunkSize
-//   while (start < arr.length) {
-//     chunkedArr.push(arr.slice(start ,end ));
-//     start = end
-//     end=end+chunkSize
-//   }
-//   return chunkedArr;
-// };
-
-// console.log(splitArray(arr, 3));
-
-// **2 by using splice method
-
-// const splitArray = (arr, chunkSize) => {
-//   const chunkedArr = [];
-//   let start = 0;
-//   while (arr.length) {
-//     chunkedArr.push(arr.splice(start, chunkSize));
-//   }
-//   return chunkedArr;
-// };
-
-// console.log(splitArray(arr, 3));
-
-// 3 without using any inbuilt method
-
-const splitArray = (arr, chunkSize) => {
-  const chunkedArr = [];
-  let i = 0;
-  while (i < arr.length) {
-    let start = i;
-    let end = start + chunkSize;
-    let tempArr = [];
-    while (start < end) {
-      tempArr.push(arr[start]);
-
-      start++;
-      if (!arr[start]) {
-        break;
-      }
-    }
-    chunkedArr.push(tempArr);
-    i += chunkSize;
+const findPeak = (arr) => {
+  if (arr.length === 1 || arr[0] > arr[1]) {
+    return arr[0];
   }
-  return chunkedArr;
+  if (arr[arr.length - 1] > arr[arr.length - 2]) {
+    return arr[arr.length - 1];
+  }
+
+  let low = 1;
+  let high = arr.length - 2;
+  let mid;
+
+  while (low <= high) {
+    mid = Math.floor((low + high) / 2);
+
+    if(arr[mid]>arr[mid-1]&& arr[mid]>arr[mid+1]) {
+        return mid
+    } else if(arr[mid]<arr[low]) {
+        high=mid-1
+    } else {
+        low=mid+1
+
+    }
+  }
 };
 
-console.log(splitArray(arr, 3));
+console.log(findPeak(arr))
